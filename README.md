@@ -2,10 +2,6 @@
 
 Aplicação moderna para geração de leads desenvolvida para o time de vendas da Alest.
 
-## 🚀 Demo
-
-🔗 **[Acesse a aplicação](https://ryanteodoroalest.github.io/lead-generator2/)**
-
 ## ✨ Funcionalidades
 
 ### Autenticação
