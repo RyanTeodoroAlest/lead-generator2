@@ -1,119 +1,87 @@
-# Gerador de Leads - Time de Vendas
+# Gerador de Leads Alest
 
-Uma aplicação moderna e intuitiva para geração de leads, desenvolvida especificamente para times de vendas não técnicos.
+Aplicação moderna para geração de leads desenvolvida para o time de vendas da Alest.
 
-## 🎨 Design
+## 🚀 Demo
 
-- **Cores principais**: Cinza e Laranja (tons variados)
-- **Temas**: Tema escuro (padrão) e tema claro
-- **Interface**: Moderna, limpa e amigável
-- **Responsividade**: Totalmente responsivo para desktop, tablet e mobile
-- **UX**: Otimizada para usuários não técnicos
-- **Transições**: Animações suaves entre temas
+🔗 **[Acesse a aplicação](https://ryanteodoroalest.github.io/lead-generator2/)**
 
 ## ✨ Funcionalidades
 
+### Autenticação
+- Login com Google (simulado)
+- Gerenciamento de sessão do usuário
+- Logout via menu dropdown
+
 ### Filtros de Busca
-- **Localidade dos Leads**: Busca por cidade/região
-- **Palavras-chave**: Segmentação por área de atuação
-- **Formato da Empresa**: Tipo jurídico (MEI, Ltda, SA, etc.)
-- **Região**: Filtro por macro-região
-- **Número da Empresa**: Busca específica por CNPJ
-- **Rede de Venda**: Tipo de canal (Varejo, Atacado, Online, Híbrido)
+- **Localização dos Leads**: Busca por cidades/países (separados por vírgula)
+- **Localização da Sede (HQ)**: Filtro por localização da empresa
+- **Indústrias**: Seleção múltipla via dropdown com checkboxes
+- **Cargos Incluídos**: Segmentação por cargos desejados
+- **Cargos Excluídos**: Exclusão de cargos específicos
+- **Tamanho da Empresa**: Seleção múltipla de portes (1-10 até +5.000 funcionários)
+- **Máximo de Leads**: Limite configurável até 10.000 leads
 - **Email Qualificado**: Opção para buscar apenas leads com email validado
 
-### Resultados
-- **Visualização em Cards**: Layout limpo e organizado
-- **Score de Qualidade**: Pontuação de 0-100% para cada lead
-- **Informações Completas**: Nome, email, telefone, localização, segmento
-- **Estatísticas**: Resumo dos resultados encontrados
-- **Exportação**: Possibilidade de baixar os dados
+### Interface
+- **Tema Claro/Escuro**: Alternância com persistência no navegador
+- **Design Responsivo**: Adaptado para desktop e mobile
+- **Visualização de Resultados**: Cards organizados com score de qualidade
+- **Estatísticas**: Resumo de leads encontrados, score médio e alta qualidade
 
-## 🚀 Tecnologias
+## 🛠️ Tecnologias
 
-- **React 18**: Framework principal
-- **Tailwind CSS**: Estilização moderna e responsiva
-- **Lucide React**: Ícones consistentes e modernos
-- **PostCSS**: Processamento de CSS
+- **React 18** - Framework JavaScript
+- **Tailwind CSS** - Estilização utilitária
+- **Lucide React** - Biblioteca de ícones
+- **React Context API** - Gerenciamento de tema
+- **GitHub Pages** - Hospedagem
 
 ## 📦 Instalação
 
 ```bash
+# Clonar repositório
+git clone https://github.com/RyanTeodoroAlest/lead-generator2.git
+cd lead-generator2
+
 # Instalar dependências
 npm install
 
-# Iniciar servidor de desenvolvimento
+# Executar em desenvolvimento
 npm start
 
 # Build para produção
 npm run build
+
+# Deploy para GitHub Pages
+npm run deploy
 ```
 
-## 🎯 Público-Alvo
+## 📂 Estrutura do Projeto
 
-- Times de vendas
-- Profissionais de marketing
-- Gestores comerciais
-- Usuários não técnicos
-
-## 📱 Interface
-
-### Header
-- Logo e branding da empresa
-- Indicador de status online
-- **Botão de troca de tema** (Sol/Lua)
-- Perfil do usuário logado
-
-### Sistema de Temas
-- **Tema Escuro** (padrão): Interface com tons de cinza escuro
-- **Tema Claro**: Interface com fundo branco e tons claros
-- **Persistência**: Tema salvo automaticamente no navegador
-- **Transições suaves**: Animações de 300ms entre temas
-- **Ícones dinâmicos**: Sol para tema claro, Lua para tema escuro
-
-### Formulário de Busca
-- Campos intuitivos com ícones
-- Validação em tempo real
-- Feedback visual durante a busca
-
-### Resultados
-- Cards organizados por relevância
-- Score visual de qualidade
-- Ações rápidas (visualizar, exportar)
-- Estatísticas resumidas
-
-## 🔧 Configuração
-
-O projeto está configurado com:
-- Tailwind CSS para estilização
-- Componentes reutilizáveis
-- Estado gerenciado com React Hooks
-- Layout responsivo
-- Cores personalizadas (cinza e laranja)
-
-## 📊 Métricas
-
-- Mínimo de 500 leads por busca
-- Score médio de qualidade
-- Contagem de leads de alta qualidade (>85%)
-- Tempo de resposta otimizado
+```
+src/
+├── components/
+│   ├── Header.js           # Cabeçalho com tema e perfil
+│   ├── LoginScreen.js      # Tela de autenticação
+│   ├── LeadGenerator.js    # Componente principal
+│   ├── SearchForm.js       # Formulário de filtros
+│   ├── ResultsDisplay.js   # Exibição de resultados
+│   └── ThemeToggle.js      # Botão de alternância de tema
+├── contexts/
+│   └── ThemeContext.js     # Contexto de tema global
+├── App.js                  # Componente raiz
+├── index.js                # Ponto de entrada
+└── index.css               # Estilos globais
+```
 
 ## 🎨 Paleta de Cores
 
-### Laranja (Primary)
-- 50: #fff7ed
-- 500: #f97316 (principal)
-- 600: #ea580c (hover)
+- **Primary (Laranja)**: `#f97316`
+- **Hover**: `#ea580c`
+- **Background Claro**: `#f9fafb`
+- **Background Escuro**: `#111827`
 
-### Cinza
-- 50: #f9fafb (background)
-- 900: #111827 (texto)
+## 📝 Licença
 
-## 📝 Próximos Passos
-
-- [ ] Integração com API real de leads
-- [ ] Sistema de autenticação
-- [ ] Exportação em múltiplos formatos
-- [ ] Filtros avançados
-- [ ] Dashboard de métricas
-- [ ] Histórico de buscas
+Este projeto foi desenvolvido para uso interno da Alest.
